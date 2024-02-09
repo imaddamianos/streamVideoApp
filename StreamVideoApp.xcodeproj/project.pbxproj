@@ -10,9 +10,10 @@
 		04A7BFDC2B76969100009894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7BFDB2B76969100009894 /* AppDelegate.swift */; };
 		04A7BFDE2B76969100009894 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7BFDD2B76969100009894 /* SceneDelegate.swift */; };
 		04A7BFE02B76969100009894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A7BFDF2B76969100009894 /* ViewController.swift */; };
-		04A7BFE32B76969100009894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A7BFE12B76969100009894 /* Main.storyboard */; };
 		04A7BFE52B76969300009894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A7BFE42B76969300009894 /* Assets.xcassets */; };
 		04A7BFE82B76969300009894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A7BFE62B76969300009894 /* LaunchScreen.storyboard */; };
+		04A7BFF12B7696B700009894 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 04A7BFF02B7696B700009894 /* GoogleInteractiveMediaAds */; };
+		04A7BFF72B76ABDF00009894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A7BFF62B76ABDF00009894 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,10 @@
 		04A7BFDB2B76969100009894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A7BFDD2B76969100009894 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04A7BFDF2B76969100009894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04A7BFE22B76969100009894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04A7BFE42B76969300009894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A7BFE72B76969300009894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A7BFE92B76969300009894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A7BFF62B76ABDF00009894 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A7BFF12B7696B700009894 /* GoogleInteractiveMediaAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +61,7 @@
 				04A7BFDB2B76969100009894 /* AppDelegate.swift */,
 				04A7BFDD2B76969100009894 /* SceneDelegate.swift */,
 				04A7BFDF2B76969100009894 /* ViewController.swift */,
-				04A7BFE12B76969100009894 /* Main.storyboard */,
+				04A7BFF62B76ABDF00009894 /* Main.storyboard */,
 				04A7BFE42B76969300009894 /* Assets.xcassets */,
 				04A7BFE62B76969300009894 /* LaunchScreen.storyboard */,
 				04A7BFE92B76969300009894 /* Info.plist */,
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = StreamVideoApp;
+			packageProductDependencies = (
+				04A7BFF02B7696B700009894 /* GoogleInteractiveMediaAds */,
+			);
 			productName = StreamVideoApp;
 			productReference = 04A7BFD82B76969100009894 /* StreamVideoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 04A7BFCF2B76969100009894;
+			packageReferences = (
+				04A7BFEF2B7696B700009894 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */,
+			);
 			productRefGroup = 04A7BFD92B76969100009894 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A7BFF72B76ABDF00009894 /* Main.storyboard in Resources */,
 				04A7BFE82B76969300009894 /* LaunchScreen.storyboard in Resources */,
 				04A7BFE52B76969300009894 /* Assets.xcassets in Resources */,
-				04A7BFE32B76969100009894 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +155,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04A7BFE12B76969100009894 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A7BFE22B76969100009894 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04A7BFE62B76969300009894 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04A7BFEF2B7696B700009894 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04A7BFF02B7696B700009894 /* GoogleInteractiveMediaAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04A7BFEF2B7696B700009894 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */;
+			productName = GoogleInteractiveMediaAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04A7BFD02B76969100009894 /* Project object */;
 }

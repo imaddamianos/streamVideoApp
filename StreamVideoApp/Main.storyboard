@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="StreamVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clF-Tr-Uha">
+                                <rect key="frame" x="30" y="99" width="333" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-26-gLL">
+                                        <rect key="frame" x="145" y="58" width="43.333333333333343" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="onPlayButtonTouch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fod-W5-DaT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iHx-NJ-wQT"/>
+                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerX" secondItem="clF-Tr-Uha" secondAttribute="centerX" id="sp0-C7-VXU"/>
+                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerY" secondItem="clF-Tr-Uha" secondAttribute="centerY" id="vQ9-Uk-oZG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="clF-Tr-Uha" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="NnH-BS-zvt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="clF-Tr-Uha" secondAttribute="trailing" constant="30" id="lqP-tK-8Lm"/>
+                            <constraint firstItem="clF-Tr-Uha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nsv-0q-13S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="hpt-26-gLL" id="v0Y-MN-dIY"/>
+                        <outlet property="videoVw" destination="clF-Tr-Uha" id="wUp-l5-B6J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="-53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
