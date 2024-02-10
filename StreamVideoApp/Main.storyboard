@@ -48,20 +48,41 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rac-l0-Sjt">
+                                <rect key="frame" x="10" y="459" width="373" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-jW-EPR">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipw-6R-FgX">
+                                        <rect key="frame" x="324" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="isSubscriberSwitchChanged:" destination="xNp-96-hwt" eventType="valueChanged" id="79K-Hx-M2J"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nAk-6D-xaF"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="rac-l0-Sjt" secondAttribute="trailing" constant="10" id="Bvh-gc-0S7"/>
+                            <constraint firstItem="rac-l0-Sjt" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="10" id="Dkt-5d-9TG"/>
                             <constraint firstItem="Mma-Oe-URG" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="10" id="JEo-CC-ae1"/>
                             <constraint firstItem="RX2-CM-Yvd" firstAttribute="top" secondItem="nAk-6D-xaF" secondAttribute="top" constant="10" id="KFO-aI-BkW"/>
                             <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="RX2-CM-Yvd" secondAttribute="trailing" constant="15" id="Mzj-eM-gbx"/>
                             <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="Mma-Oe-URG" secondAttribute="trailing" constant="10" id="RKB-m0-hii"/>
                             <constraint firstItem="Mma-Oe-URG" firstAttribute="top" secondItem="RX2-CM-Yvd" secondAttribute="bottom" constant="20" id="Tp9-4z-byG"/>
+                            <constraint firstItem="rac-l0-Sjt" firstAttribute="top" secondItem="Mma-Oe-URG" secondAttribute="bottom" constant="20" id="Y00-ZG-Xbr"/>
                             <constraint firstItem="RX2-CM-Yvd" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="ovT-Nt-a3r"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="horizontalTableView" destination="Mma-Oe-URG" id="M1q-PO-ARa"/>
+                        <outlet property="isSubscriberSwitch" destination="Ipw-6R-FgX" id="akg-Oa-a4o"/>
                         <outlet property="verticalCollectionView" destination="RX2-CM-Yvd" id="pqm-EL-d3B"/>
                         <segue destination="Y6W-OH-hqX" kind="show" identifier="goToPlayer" id="uri-eL-bhS"/>
                     </connections>

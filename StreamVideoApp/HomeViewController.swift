@@ -9,12 +9,14 @@ import UIKit
 
 class HomePageViewController: UIViewController {
 
+    @IBOutlet weak var isSubscriberSwitch: UISwitch!
     @IBOutlet weak var horizontalTableView: UICollectionView!
     @IBOutlet weak var verticalCollectionView: UICollectionView!
 
     var horizontalImages: [UIImage] = []
     var verticalImages: [UIImage] = []
     var videoModels: [MediaContent] = []
+    var isSubscriber: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,17 @@ class HomePageViewController: UIViewController {
         setupCollectionView()
         loadSampleImages()
         loadVideoModels()
+        
+        isSubscriber = UserDefaults.standard.bool(forKey: "isSubscriber")
+        isSubscriberSwitch.isOn = isSubscriber
     }
 
+    @IBAction func isSubscriberSwitchChanged(_ sender: Any) {
+        isSubscriber = (sender as AnyObject).isOn
+        // Save isSubscriber value to local storage
+        UserDefaults.standard.set(isSubscriber, forKey: "isSubscriber")
+    }
+    
     func setupCollectionView() {
         horizontalTableView.delegate = self
         horizontalTableView.dataSource = self

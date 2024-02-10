@@ -25,11 +25,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-      guard let videoModel = videoModel else {
-          
-        return
-    }
     playButton.layer.zPosition = CGFloat.greatestFiniteMagnitude
 
     setUpContentPlayer()
