@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="horizontalTableView" destination="Mma-Oe-URG" id="M1q-PO-ARa"/>
                         <outlet property="verticalCollectionView" destination="RX2-CM-Yvd" id="pqm-EL-d3B"/>
+                        <segue destination="Y6W-OH-hqX" kind="show" identifier="goToPlayer" id="uri-eL-bhS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0s-SJ-uD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -74,11 +75,11 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="StreamVideoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clF-Tr-Uha">
-                                <rect key="frame" x="30" y="99" width="333" height="150"/>
+                                <rect key="frame" x="30" y="40" width="333" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-26-gLL">
                                         <rect key="frame" x="145" y="58" width="43.333333333333343" height="34.333333333333343"/>
@@ -105,6 +106,7 @@
                             <constraint firstItem="clF-Tr-Uha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nsv-0q-13S"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DdE-9m-4mO"/>
                     <connections>
                         <outlet property="playButton" destination="hpt-26-gLL" id="v0Y-MN-dIY"/>
                         <outlet property="videoVw" destination="clF-Tr-Uha" id="wUp-l5-B6J"/>

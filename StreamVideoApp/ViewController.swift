@@ -25,12 +25,17 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
   private var contentPlayhead: IMAAVPlayerContentPlayhead?
   private let adsLoader = IMAAdsLoader(settings: nil)
   private var adsManager: IMAAdsManager?
+    var videoModel: MediaContent?
 
   // MARK: - View controller lifecycle methods
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+      guard let videoModel = videoModel else {
+                  // Handle the case where videoModel is nil
+        return
+    }
     playButton.layer.zPosition = CGFloat.greatestFiniteMagnitude
 
     setUpContentPlayer()
