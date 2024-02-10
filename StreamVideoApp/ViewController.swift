@@ -20,6 +20,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
   private let adsLoader = IMAAdsLoader(settings: nil)
   private var adsManager: IMAAdsManager?
     var videoModel: MediaContent?
+    var isSubscriber: Bool?
 
   // MARK: - View controller lifecycle methods
 
@@ -36,14 +37,15 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
   }
 
     @IBAction func onPlayButtonTouch(_ sender: Any) {
-        if let isSubscriber = videoModel?.isSubscriber, isSubscriber {
+        let isSubscriber = UserDefaults.standard.bool(forKey: "isSubscriber")
+        if isSubscriber{
             // If the user is a subscriber, play the content directly
             playContent()
         } else {
             // If not a subscriber, request ads and then play the content
             requestAds()
-            playButton.isHidden = true
         }
+        playButton.isHidden = true
     }
     
     private func playContent() {

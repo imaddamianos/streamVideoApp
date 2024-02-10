@@ -12,7 +12,7 @@ struct MediaContent: Decodable {
     let image: String
     let hlsMediaURL: String
     let adsTagURL: String
-    let isSubscriber: Bool
+    var isSubscriber: Bool
     let name: String
 }
 

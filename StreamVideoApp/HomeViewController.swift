@@ -79,8 +79,9 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         let selectedModel = videoModels[indexPath.item]
+        var selectedModel = videoModels[indexPath.item]
          performSegue(withIdentifier: "goToPlayer", sender: selectedModel)
+       selectedModel.isSubscriber = isSubscriber
      }
      
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
