@@ -10,12 +10,6 @@ import GoogleInteractiveMediaAds
 import UIKit
 
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
-    static let testAppContentURL = "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8"
-
-  static let testAppAdTagURL =
-    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/"
-    + "single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&"
-    + "gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var videoVw: UIView!
@@ -33,7 +27,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     super.viewDidLoad()
 
       guard let videoModel = videoModel else {
-                  // Handle the case where videoModel is nil
+          
         return
     }
     playButton.layer.zPosition = CGFloat.greatestFiniteMagnitude
@@ -47,15 +41,26 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
   }
 
     @IBAction func onPlayButtonTouch(_ sender: Any) {
-        requestAds()
-        playButton.isHidden = true
+        if let isSubscriber = videoModel?.isSubscriber, isSubscriber {
+            // If the user is a subscriber, play the content directly
+            playContent()
+        } else {
+            // If not a subscriber, request ads and then play the content
+            requestAds()
+            playButton.isHidden = true
+        }
+    }
+    
+    private func playContent() {
+        // Play the content directly without ads
+        contentPlayer?.play()
     }
 
   // MARK: Content player methods
 
   private func setUpContentPlayer() {
     // Load AVPlayer with path to our content.
-    guard let contentURL = URL(string: ViewController.testAppContentURL) else {
+      guard let contentURL = URL(string: videoModel!.hlsMediaURL) else {
       print("ERROR: use a valid URL for the content URL")
       return
     }
@@ -94,7 +99,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
       adContainer: videoVw, viewController: self, companionSlots: nil)
     // Create an ad request with our ad tag, display container, and optional user context.
     let request = IMAAdsRequest(
-      adTagUrl: ViewController.testAppAdTagURL,
+        adTagUrl: videoModel!.adsTagURL,
       adDisplayContainer: adDisplayContainer,
       contentPlayhead: contentPlayhead,
       userContext: nil)

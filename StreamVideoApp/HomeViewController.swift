@@ -59,8 +59,9 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifier, for: indexPath) as! MoviesCollectionViewCell
         let videoModel = videoModels[indexPath.item]
         
-            cell.backgroundColor = UIColor.lightGray
+        cell.backgroundColor = UIColor.lightGray
         cell.coverImage.image = UIImage(named: videoModel.image)
+        cell.movieTxt.text = videoModel.name
 
             return cell
 //        }

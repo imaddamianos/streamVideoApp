@@ -19,19 +19,29 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-Vp-ML4">
                         <rect key="frame" x="0.0" y="0.0" width="189" height="172"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VGa-Me-daH">
+                        <rect key="frame" x="20" y="131.66666666666666" width="149" height="20.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="7vC-Vp-ML4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1OT-OQ-SjT"/>
+                <constraint firstItem="VGa-Me-daH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="253-fu-jGT"/>
                 <constraint firstAttribute="bottom" secondItem="7vC-Vp-ML4" secondAttribute="bottom" id="60n-a2-aWb"/>
+                <constraint firstAttribute="bottom" secondItem="VGa-Me-daH" secondAttribute="bottom" constant="20" id="9ZT-aV-vXX"/>
+                <constraint firstAttribute="trailing" secondItem="VGa-Me-daH" secondAttribute="trailing" constant="20" id="RKJ-P2-OlH"/>
                 <constraint firstAttribute="trailing" secondItem="7vC-Vp-ML4" secondAttribute="trailing" id="Uc4-Zl-naL"/>
                 <constraint firstItem="7vC-Vp-ML4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i1j-rU-BzG"/>
             </constraints>
             <size key="customSize" width="189" height="172"/>
             <connections>
                 <outlet property="coverImage" destination="7vC-Vp-ML4" id="xcq-Fb-HOx"/>
+                <outlet property="movieTxt" destination="VGa-Me-daH" id="qAy-Dx-idD"/>
             </connections>
             <point key="canvasLocation" x="-45.038167938931295" y="31.690140845070424"/>
         </collectionViewCell>

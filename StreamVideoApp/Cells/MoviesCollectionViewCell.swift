@@ -11,6 +11,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
     
+    @IBOutlet weak var movieTxt: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
     
     override func awakeFromNib() {
