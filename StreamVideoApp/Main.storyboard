@@ -34,27 +34,34 @@
                                     <outlet property="delegate" destination="xNp-96-hwt" id="duH-U9-Vfw"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-W2-Kfp">
-                                <rect key="frame" x="15" y="239" width="363" height="200"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-Oe-URG">
+                                <rect key="frame" x="10" y="239" width="373" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="hOY-4M-gzQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="yrP-bX-3X0"/>
                                 </constraints>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HIy-T7-bed">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nAk-6D-xaF"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="gwd-W2-Kfp" secondAttribute="trailing" constant="15" id="6cZ-nI-wAr"/>
+                            <constraint firstItem="Mma-Oe-URG" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="10" id="JEo-CC-ae1"/>
                             <constraint firstItem="RX2-CM-Yvd" firstAttribute="top" secondItem="nAk-6D-xaF" secondAttribute="top" constant="10" id="KFO-aI-BkW"/>
                             <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="RX2-CM-Yvd" secondAttribute="trailing" constant="15" id="Mzj-eM-gbx"/>
-                            <constraint firstItem="gwd-W2-Kfp" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="PpK-cw-Hrk"/>
-                            <constraint firstItem="gwd-W2-Kfp" firstAttribute="top" secondItem="RX2-CM-Yvd" secondAttribute="bottom" constant="20" id="e9p-9g-cO8"/>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="Mma-Oe-URG" secondAttribute="trailing" constant="10" id="RKB-m0-hii"/>
+                            <constraint firstItem="Mma-Oe-URG" firstAttribute="top" secondItem="RX2-CM-Yvd" secondAttribute="bottom" constant="20" id="Tp9-4z-byG"/>
                             <constraint firstItem="RX2-CM-Yvd" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="ovT-Nt-a3r"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="horizontalTableView" destination="gwd-W2-Kfp" id="eIm-Pm-dw7"/>
+                        <outlet property="horizontalTableView" destination="Mma-Oe-URG" id="M1q-PO-ARa"/>
                         <outlet property="verticalCollectionView" destination="RX2-CM-Yvd" id="pqm-EL-d3B"/>
                     </connections>
                 </viewController>
