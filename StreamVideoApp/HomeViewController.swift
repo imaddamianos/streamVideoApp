@@ -10,13 +10,11 @@ import UIKit
 class HomePageViewController: UIViewController {
 
     @IBOutlet weak var isSubscriberSwitch: UISwitch!
-    
     @IBOutlet weak var horizontalCollectionView: UICollectionView!
     @IBOutlet weak var verticalCollectionView: UICollectionView!
 
-    var horizontalImages: [UIImage] = []
-    var verticalImages: [UIImage] = []
-    var videoModels: [MediaContent] = []
+    var horizontalVideoModels: [MediaContent] = []
+    var verticalVideoModels: [MediaContent] = []
     var isSubscriber: Bool = false
 
     override func viewDidLoad() {
@@ -30,8 +28,7 @@ class HomePageViewController: UIViewController {
     }
 
     @IBAction func isSubscriberSwitchChanged(_ sender: Any) {
-        isSubscriber = (sender as AnyObject).isOn
-        // Save isSubscriber value to local storage
+        isSubscriber = isSubscriberSwitch.isOn
         UserDefaults.standard.set(isSubscriber, forKey: "isSubscriber")
     }
     
@@ -45,45 +42,65 @@ class HomePageViewController: UIViewController {
     }
     
     func loadVideoModels() {
-            if let models = APICalls.shared.readVideoModelsFromJSONFile() {
-                videoModels = models
-                verticalCollectionView.reloadData()
-                horizontalCollectionView.reloadData()
-            }
+        if let horizontalModels = APICalls.shared.readHorizontalVideoModelsFromJSONFile() {
+            horizontalVideoModels = horizontalModels
+            horizontalCollectionView.reloadData()
         }
+        
+        if let verticalModels = APICalls.shared.readVerticalVideoModelsFromJSONFile() {
+            verticalVideoModels = verticalModels
+            verticalCollectionView.reloadData()
+        }
+    }
 }
 
 extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videoModels.count
+        if collectionView == horizontalCollectionView {
+            return horizontalVideoModels.count
+        } else if collectionView == verticalCollectionView {
+            return verticalVideoModels.count
+        }
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifier, for: indexPath) as! MoviesCollectionViewCell
-        let videoModel = videoModels[indexPath.item]
+        
+        var videoModel: MediaContent
+        
+        if collectionView == horizontalCollectionView {
+            videoModel = horizontalVideoModels[indexPath.item]
+        } else {
+            videoModel = verticalVideoModels[indexPath.item]
+        }
         
         cell.backgroundColor = UIColor.lightGray
         cell.coverImage.image = UIImage(named: videoModel.image)
         cell.movieTxt.text = videoModel.name
 
-            return cell
-//        }
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var selectedModel = videoModels[indexPath.item]
-         performSegue(withIdentifier: "goToPlayer", sender: selectedModel)
-       selectedModel.isSubscriber = isSubscriber
-     }
-     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "goToPlayer" {
-             if let destinationVC = segue.destination as? ViewController {
-                 if let selectedModel = sender as? MediaContent {
-                     destinationVC.videoModel = selectedModel
-                 }
-             }
-         }
-     }
+        var selectedModel: MediaContent
+        
+        if collectionView == horizontalCollectionView {
+            selectedModel = horizontalVideoModels[indexPath.item]
+        } else {
+            selectedModel = verticalVideoModels[indexPath.item]
+        }
+        
+        performSegue(withIdentifier: "goToPlayer", sender: selectedModel)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPlayer" {
+            if let destinationVC = segue.destination as? ViewController {
+                if let selectedModel = sender as? MediaContent {
+                    destinationVC.videoModel = selectedModel
+                }
+            }
+        }
+    }
 }

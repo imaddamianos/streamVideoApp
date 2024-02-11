@@ -1,0 +1,33 @@
+[
+    
+    {
+        "image": "joe",
+        "name" : "movie",
+        "hlsMediaURL": "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "beep2",
+        "name" : "Beep bop1",
+        "hlsMediaURL": "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    
+    {
+        "image": "sintel",
+        "name" : "Sintel",
+        "hlsMediaURL": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "Cartoon",
+        "name" : "Big Buck Bunny",
+        "hlsMediaURL": "https://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    }
+    
+]
