@@ -10,7 +10,8 @@ import UIKit
 class HomePageViewController: UIViewController {
 
     @IBOutlet weak var isSubscriberSwitch: UISwitch!
-    @IBOutlet weak var horizontalTableView: UICollectionView!
+    
+    @IBOutlet weak var horizontalCollectionView: UICollectionView!
     @IBOutlet weak var verticalCollectionView: UICollectionView!
 
     var horizontalImages: [UIImage] = []
@@ -22,7 +23,6 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollectionView()
-        loadSampleImages()
         loadVideoModels()
         
         isSubscriber = UserDefaults.standard.bool(forKey: "isSubscriber")
@@ -36,29 +36,21 @@ class HomePageViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        horizontalTableView.delegate = self
-        horizontalTableView.dataSource = self
+        horizontalCollectionView.delegate = self
+        horizontalCollectionView.dataSource = self
         verticalCollectionView.delegate = self
         verticalCollectionView.dataSource = self
         verticalCollectionView.register(MoviesCollectionViewCell.nib, forCellWithReuseIdentifier: MoviesCollectionViewCell.identifier)
-        horizontalTableView.register(MoviesCollectionViewCell.nib, forCellWithReuseIdentifier: MoviesCollectionViewCell.identifier)
-        let verticalLayout = UICollectionViewFlowLayout()
-        verticalLayout.scrollDirection = .vertical
-        verticalCollectionView.collectionViewLayout = verticalLayout
+        horizontalCollectionView.register(MoviesCollectionViewCell.nib, forCellWithReuseIdentifier: MoviesCollectionViewCell.identifier)
     }
     
     func loadVideoModels() {
             if let models = APICalls.shared.readVideoModelsFromJSONFile() {
                 videoModels = models
                 verticalCollectionView.reloadData()
-                horizontalTableView.reloadData()
+                horizontalCollectionView.reloadData()
             }
         }
-
-    func loadSampleImages() {
-        horizontalImages = [UIImage(named: "sample_image_1")!, UIImage(named: "sample_image_2")!, UIImage(named: "sample_image_3")!]
-        verticalImages = [UIImage(named: "sample_image_4")!, UIImage(named: "sample_image_3")!, UIImage(named: "sample_image_2")!]
-    }
 }
 
 extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -83,6 +75,18 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
          performSegue(withIdentifier: "goToPlayer", sender: selectedModel)
        selectedModel.isSubscriber = isSubscriber
      }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == horizontalCollectionView{
+            let totalWidth = horizontalCollectionView.bounds.width
+            let totalHeight = horizontalCollectionView.bounds.height
+            return CGSize(width: totalWidth/2.2, height: totalHeight/1.1)
+        }else{
+            let totalWidth = verticalCollectionView.bounds.width
+            let totalHeight = verticalCollectionView.bounds.height
+            return CGSize(width: totalWidth/2.2, height: totalHeight/1.1)
+        }
+      }
      
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "goToPlayer" {
@@ -93,4 +97,5 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
              }
          }
      }
+    
 }

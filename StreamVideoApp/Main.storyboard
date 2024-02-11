@@ -16,14 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RX2-CM-Yvd">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RX2-CM-Yvd">
                                 <rect key="frame" x="15" y="69" width="363" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="BJt-4A-I8D"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pLc-ON-pZu">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pLc-ON-pZu">
+                                    <size key="itemSize" width="90" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -35,10 +32,10 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mma-Oe-URG">
-                                <rect key="frame" x="10" y="239" width="373" height="200"/>
+                                <rect key="frame" x="15" y="239" width="363" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="yrP-bX-3X0"/>
+                                    <constraint firstAttribute="height" constant="200" id="c6M-LC-R6p"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HIy-T7-bed">
                                     <size key="itemSize" width="128" height="128"/>
@@ -49,39 +46,43 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rac-l0-Sjt">
-                                <rect key="frame" x="10" y="459" width="373" height="31"/>
+                                <rect key="frame" x="15" y="459" width="363" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-jW-EPR">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="fill" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipw-6R-FgX">
-                                        <rect key="frame" x="324" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="314" y="0.0" width="51" height="40"/>
                                         <connections>
                                             <action selector="isSubscriberSwitchChanged:" destination="xNp-96-hwt" eventType="valueChanged" id="79K-Hx-M2J"/>
                                         </connections>
                                     </switch>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="svN-ai-EuZ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nAk-6D-xaF"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="rac-l0-Sjt" secondAttribute="trailing" constant="10" id="Bvh-gc-0S7"/>
-                            <constraint firstItem="rac-l0-Sjt" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="10" id="Dkt-5d-9TG"/>
-                            <constraint firstItem="Mma-Oe-URG" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="10" id="JEo-CC-ae1"/>
-                            <constraint firstItem="RX2-CM-Yvd" firstAttribute="top" secondItem="nAk-6D-xaF" secondAttribute="top" constant="10" id="KFO-aI-BkW"/>
-                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="RX2-CM-Yvd" secondAttribute="trailing" constant="15" id="Mzj-eM-gbx"/>
-                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="Mma-Oe-URG" secondAttribute="trailing" constant="10" id="RKB-m0-hii"/>
-                            <constraint firstItem="Mma-Oe-URG" firstAttribute="top" secondItem="RX2-CM-Yvd" secondAttribute="bottom" constant="20" id="Tp9-4z-byG"/>
-                            <constraint firstItem="rac-l0-Sjt" firstAttribute="top" secondItem="Mma-Oe-URG" secondAttribute="bottom" constant="20" id="Y00-ZG-Xbr"/>
-                            <constraint firstItem="RX2-CM-Yvd" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="ovT-Nt-a3r"/>
+                            <constraint firstItem="rac-l0-Sjt" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="5ec-XP-81I"/>
+                            <constraint firstItem="Mma-Oe-URG" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="CbG-dm-KCm"/>
+                            <constraint firstItem="Mma-Oe-URG" firstAttribute="top" secondItem="RX2-CM-Yvd" secondAttribute="bottom" constant="20" id="Osl-8G-g5V"/>
+                            <constraint firstItem="RX2-CM-Yvd" firstAttribute="leading" secondItem="nAk-6D-xaF" secondAttribute="leading" constant="15" id="QKV-iO-oTB"/>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="RX2-CM-Yvd" secondAttribute="trailing" constant="15" id="Z6o-F2-1MV"/>
+                            <constraint firstItem="RX2-CM-Yvd" firstAttribute="top" secondItem="nAk-6D-xaF" secondAttribute="top" constant="10" id="ZpR-g6-VDw"/>
+                            <constraint firstItem="rac-l0-Sjt" firstAttribute="top" secondItem="Mma-Oe-URG" secondAttribute="bottom" constant="20" id="eRI-yh-Ofr"/>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="Mma-Oe-URG" secondAttribute="trailing" constant="15" id="mg9-kI-pag"/>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="trailing" secondItem="rac-l0-Sjt" secondAttribute="trailing" constant="15" id="p44-an-2Um"/>
+                            <constraint firstItem="nAk-6D-xaF" firstAttribute="bottom" secondItem="rac-l0-Sjt" secondAttribute="bottom" constant="319" id="uUk-rA-xdc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="horizontalTableView" destination="Mma-Oe-URG" id="M1q-PO-ARa"/>
+                        <outlet property="horizontalCollectionView" destination="Mma-Oe-URG" id="G1e-9Z-ckA"/>
                         <outlet property="isSubscriberSwitch" destination="Ipw-6R-FgX" id="akg-Oa-a4o"/>
                         <outlet property="verticalCollectionView" destination="RX2-CM-Yvd" id="pqm-EL-d3B"/>
                         <segue destination="Y6W-OH-hqX" kind="show" identifier="goToPlayer" id="uri-eL-bhS"/>
@@ -96,7 +97,7 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="StreamVideoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clF-Tr-Uha">
@@ -139,12 +140,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
