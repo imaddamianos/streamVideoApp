@@ -16,6 +16,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layer.cornerRadius = 20
         // Initialization code
     }
 

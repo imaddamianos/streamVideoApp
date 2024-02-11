@@ -75,18 +75,6 @@ extension HomePageViewController: UICollectionViewDataSource, UICollectionViewDe
          performSegue(withIdentifier: "goToPlayer", sender: selectedModel)
        selectedModel.isSubscriber = isSubscriber
      }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == horizontalCollectionView{
-            let totalWidth = horizontalCollectionView.bounds.width
-            let totalHeight = horizontalCollectionView.bounds.height
-            return CGSize(width: totalWidth/2.2, height: totalHeight/1.1)
-        }else{
-            let totalWidth = verticalCollectionView.bounds.width
-            let totalHeight = verticalCollectionView.bounds.height
-            return CGSize(width: totalWidth/2.2, height: totalHeight/1.1)
-        }
-      }
      
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "goToPlayer" {
