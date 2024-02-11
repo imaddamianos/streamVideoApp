@@ -96,7 +96,7 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="StreamVideoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -105,6 +105,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-26-gLL">
                                         <rect key="frame" x="145" y="58" width="43.333333333333343" height="34.333333333333343"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
                                         <connections>
@@ -115,34 +116,106 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="iHx-NJ-wQT"/>
-                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerX" secondItem="clF-Tr-Uha" secondAttribute="centerX" id="sp0-C7-VXU"/>
-                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerY" secondItem="clF-Tr-Uha" secondAttribute="centerY" id="vQ9-Uk-oZG"/>
+                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerY" secondItem="clF-Tr-Uha" secondAttribute="centerY" id="uM6-BH-0kQ"/>
+                                    <constraint firstItem="hpt-26-gLL" firstAttribute="centerX" secondItem="clF-Tr-Uha" secondAttribute="centerX" id="wZY-Ip-iqq"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-2J-7M7">
+                                <rect key="frame" x="30" y="200" width="333" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVI-Kd-Wac">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="cR6-ye-FH8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="backward.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-10-O8L">
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="jvJ-qc-xoh"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZa-lf-kPE">
+                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="rwj-QG-wS4"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="forward.fill" catalog="system"/>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-6e-5Ff">
+                                        <rect key="frame" x="148" y="0.0" width="187" height="51"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CKw-W3-ulm"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-z6-Dr0">
+                                <rect key="frame" x="136.66666666666666" y="260" width="119.99999999999997" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Nk-XE-9Db"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close Player">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PZe-nX-drP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3QD-2J-7M7" firstAttribute="top" secondItem="clF-Tr-Uha" secondAttribute="bottom" constant="10" id="0am-D2-NBX"/>
+                            <constraint firstItem="3QD-2J-7M7" firstAttribute="leading" secondItem="clF-Tr-Uha" secondAttribute="leading" id="AxD-ax-5fh"/>
                             <constraint firstItem="clF-Tr-Uha" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="NnH-BS-zvt"/>
+                            <constraint firstItem="gWp-z6-Dr0" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="P3q-OW-euW"/>
+                            <constraint firstItem="3QD-2J-7M7" firstAttribute="trailing" secondItem="clF-Tr-Uha" secondAttribute="trailing" id="eJs-bN-TjZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="clF-Tr-Uha" secondAttribute="trailing" constant="30" id="lqP-tK-8Lm"/>
                             <constraint firstItem="clF-Tr-Uha" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nsv-0q-13S"/>
+                            <constraint firstItem="gWp-z6-Dr0" firstAttribute="top" secondItem="3QD-2J-7M7" secondAttribute="bottom" constant="10" id="qcV-NV-CLf"/>
+                            <constraint firstItem="gWp-z6-Dr0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="136.66666666666663" id="yDR-kr-qIr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DdE-9m-4mO"/>
                     <connections>
+                        <outlet property="closeButton" destination="gWp-z6-Dr0" id="h4U-fk-g6Y"/>
+                        <outlet property="fastForwardButton" destination="kZa-lf-kPE" id="GEq-Lj-OJc"/>
                         <outlet property="playButton" destination="hpt-26-gLL" id="v0Y-MN-dIY"/>
+                        <outlet property="playPauseButton" destination="MqS-10-O8L" id="Fte-zx-aaF"/>
+                        <outlet property="rewindButton" destination="gVI-Kd-Wac" id="1d0-CE-I81"/>
+                        <outlet property="timelineSlider" destination="Kv0-6e-5Ff" id="SEc-oF-S4f"/>
                         <outlet property="videoVw" destination="clF-Tr-Uha" id="wUp-l5-B6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="-53"/>
+            <point key="canvasLocation" x="188.54961832061068" y="-53.521126760563384"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
+        <image name="forward.fill" catalog="system" width="128" height="77"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
