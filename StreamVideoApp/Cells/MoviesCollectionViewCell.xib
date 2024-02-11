@@ -16,13 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-Vp-ML4">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vC-Vp-ML4">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VGa-Me-daH">
-                        <rect key="frame" x="20" y="139.66666666666666" width="140" height="20.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGa-Me-daH">
+                        <rect key="frame" x="0.0" y="160" width="180" height="20"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46986965154180466" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -31,11 +31,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="7vC-Vp-ML4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1OT-OQ-SjT"/>
-                <constraint firstItem="VGa-Me-daH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="253-fu-jGT"/>
+                <constraint firstAttribute="trailing" secondItem="VGa-Me-daH" secondAttribute="trailing" id="2Hd-EU-N8H"/>
                 <constraint firstAttribute="bottom" secondItem="7vC-Vp-ML4" secondAttribute="bottom" id="60n-a2-aWb"/>
-                <constraint firstAttribute="bottom" secondItem="VGa-Me-daH" secondAttribute="bottom" constant="20" id="9ZT-aV-vXX"/>
-                <constraint firstAttribute="trailing" secondItem="VGa-Me-daH" secondAttribute="trailing" constant="20" id="RKJ-P2-OlH"/>
+                <constraint firstItem="VGa-Me-daH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="He9-XX-SbL"/>
+                <constraint firstItem="VGa-Me-daH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RH2-eE-jhT"/>
                 <constraint firstAttribute="trailing" secondItem="7vC-Vp-ML4" secondAttribute="trailing" id="Uc4-Zl-naL"/>
+                <constraint firstAttribute="bottom" secondItem="VGa-Me-daH" secondAttribute="bottom" id="ZQB-uo-9zb"/>
                 <constraint firstItem="7vC-Vp-ML4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="i1j-rU-BzG"/>
             </constraints>
             <size key="customSize" width="189" height="172"/>

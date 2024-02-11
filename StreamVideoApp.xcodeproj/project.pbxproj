@@ -351,6 +351,7 @@
 				DEVELOPMENT_TEAM = W5Q8K4TABD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreamVideoApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stream Video";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -379,6 +380,7 @@
 				DEVELOPMENT_TEAM = W5Q8K4TABD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreamVideoApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stream Video";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

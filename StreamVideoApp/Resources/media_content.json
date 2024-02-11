@@ -1,72 +1,52 @@
 [
-  {
-    "image": "tearsofsteel",
-    "name" : "Tears of Steel",
-    "hlsMediaURL": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "beepbop",
-    "name" : "BipBop",
-    "hlsMediaURL": "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "phantomflex4k",
-    "name" : "Phantom Flex",
-    "hlsMediaURL": "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  },
-  {
-    "image": "sample_image_3",
-    "name" : "Movie 3",
-    "hlsMediaURL": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
-    "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
-    "isSubscriber": false
-  }
+    {
+        "image": "tearsofsteel",
+        "name" : "Tears of Steel",
+        "hlsMediaURL": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "sintel",
+        "name" : "Sintel",
+        "hlsMediaURL": "http://walterebert.com/playground/video/hls/sintel-trailer.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "phantomflex4k",
+        "name" : "Phantom Flex",
+        "hlsMediaURL": "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "Cartoon",
+        "name" : "Cartoon movie",
+        "hlsMediaURL": "https://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "SteveJobs",
+        "name" : "Apple Macbook",
+        "hlsMediaURL": "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "",
+        "name" : "movie",
+        "hlsMediaURL": "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    },
+    {
+        "image": "beepbop",
+        "name" : "BipBop",
+        "hlsMediaURL": "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8",
+        "adsTagURL": "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=",
+        "isSubscriber": false
+    }
+    
 ]
